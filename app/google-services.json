@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1061318890067",
+    "project_id": "todo3mvvm",
+    "storage_bucket": "todo3mvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061318890067:android:86f6234defb746bc606ca6",
+        "android_client_info": {
+          "package_name": "com.example.prioritytodo3mvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpcyhuHxyiylmitvl4N6f3R9PR8FMUVhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

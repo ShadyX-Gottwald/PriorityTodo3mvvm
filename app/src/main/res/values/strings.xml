@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PriorityTodo3mvvm</string>
+    <string name="next">Next</string>
+    <string name="signup">SignUp</string>
+    <string name="type_your_email">Type Your Email</string>
+    <string name="type_your_password">Type your password</string>
+    <string name="already_signed_up">Already Signed up</string>
+    <string name="sign_up">Sign up</string>
+</resources>

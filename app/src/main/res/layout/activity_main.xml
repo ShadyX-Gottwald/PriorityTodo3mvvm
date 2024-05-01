@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="50sp"
+            android:text="@string/signup">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:shadowRadius="12"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            android:hint="@string/type_your_email"
+            android:text="">
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:shadowRadius="12"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            android:text="@string/type_your_password">
+
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pass_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:shadowRadius="12"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            android:text="@string/type_your_password">
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login"
+            android:layout_width="50dp"
+            android:text="@string/already_signed_up"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:text="@string/sign_up"
+            android:id="@+id/signed"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/next"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <ProgressBar
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_circular"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:progressBackgroundTintMode="add"
+            app:indicatorColor="@color/black"
+            android:backgroundTint="@color/cardview_dark_background">
+
+        </ProgressBar>
+
+
+
+    </LinearLayout>
+
+</layout>
