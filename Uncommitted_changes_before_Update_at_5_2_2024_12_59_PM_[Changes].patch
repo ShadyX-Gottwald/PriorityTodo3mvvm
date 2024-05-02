@@ -1,0 +1,62 @@
+Subject: [PATCH] Uncommitted changes before Update at 5/2/2024 12:59 PM [Changes]
+---
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -13,9 +13,11 @@
+         android:theme="@style/Theme.PriorityTodo3mvvm"
+         tools:targetApi="31">
+         <activity
++            android:name=".DisplayActivity"
++            android:exported="false" />
++        <activity
+             android:name=".LoginActivity"
+             android:exported="false" />
+-
+         <activity
+             android:name=".MainActivity"
+             android:exported="true">
+Index: app/src/main/res/layout/activity_display.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_display.xml b/app/src/main/res/layout/activity_display.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/activity_display.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/prioritytodo3mvvm/DisplayActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/prioritytodo3mvvm/DisplayActivity.kt b/app/src/main/java/com/example/prioritytodo3mvvm/DisplayActivity.kt
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/prioritytodo3mvvm/DisplayActivity.kt	
+@@ -0,0 +1,11 @@
++package com.example.prioritytodo3mvvm
++
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++
++class DisplayActivity : AppCompatActivity() {
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView()
++    }
++}
+\ No newline at end of file
