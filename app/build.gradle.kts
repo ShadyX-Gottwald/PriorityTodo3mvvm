@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.9.23"
     id("com.google.gms.google-services")
 
 }
@@ -10,7 +11,7 @@ android {
     namespace = "com.example.prioritytodo3mvvm"
     compileSdk = 34
 
-    dataBinding { enable = true }
+
     viewBinding { enable = true }
 
     defaultConfig {
@@ -46,6 +47,7 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.firebase:firebase-database-ktx:20.3.1")
+    implementation("com.google.firebase:firebase-firestore:24.11.1")
 
 
     val nav_version = "2.7.7"

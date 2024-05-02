@@ -19,8 +19,8 @@ class RegisterViewModel(
 ): ViewModel() {
 
     // Register State
-     val _registerState = MutableLiveData<Resource<FirebaseUser>>(Resource.Loading()).apply {
-        this.value = Resource.Loading()
+     val _registerState = MutableLiveData<Resource<FirebaseUser>>(Resource.Unspecified()).apply {
+        this.value = Resource.Unspecified()
     }
 
     //UI component data

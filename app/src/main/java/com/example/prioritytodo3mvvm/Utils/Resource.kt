@@ -1,11 +1,13 @@
 package com.example.prioritytodo3mvvm.Utils
 
 sealed  class Resource<T>(
-    val data: T? = null,
-    val message: String? = null
+    open var data: T? = null,
+    open var message: String? = null
 
 ) {
-     class Success <T>(data: T ): Resource<T>()
-     class Failure<T>(message: String): Resource<T>(message = message)
-     class Loading<T>(): Resource<T>()
+    data class Success <T>(override var data: T?): Resource<T>()
+    data class Failure<T>(override var message: String?): Resource<T>(message = message)
+    data class Loading<T>(override var data: T?): Resource<T>()
+
+    class Unspecified<T>(): Resource<T>()
 }
