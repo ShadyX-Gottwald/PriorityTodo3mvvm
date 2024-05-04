@@ -45,8 +45,9 @@ class LoginActivity : AppCompatActivity() {
                     if(it.isSuccessful) {
                         Toast.makeText(this@LoginActivity ,"$email Logged In SuccessFully", Toast.LENGTH_LONG).show()
                         //fireStoreAddUser()
-                        val intent = Intent(this@LoginActivity,ShowChoiceActivity::class.java)
+                        val intent = Intent(this@LoginActivity,UserDrawerActivity::class.java)
                         startActivity(intent)
+                        finish()
                     }else {
                         Toast.makeText(this@LoginActivity, it.exception?.message.toString(), Toast.LENGTH_SHORT).show()
                     }

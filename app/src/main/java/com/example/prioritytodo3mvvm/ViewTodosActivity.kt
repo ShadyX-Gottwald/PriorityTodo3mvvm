@@ -3,6 +3,9 @@ package com.example.prioritytodo3mvvm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
@@ -48,6 +51,8 @@ class ViewTodosActivity : AppCompatActivity() {
 
         //getUserTodos()
         setContentView(bind.root)
+
+
         init()
         val viewModel by lazy { ViewTodosViewModel(auth,firestoreDb) }
         //getUserTodos()
@@ -87,8 +92,10 @@ class ViewTodosActivity : AppCompatActivity() {
         firestoreDb.collection("Todos1")
             .where(Filter.equalTo("userId", auth.currentUser!!.uid))
             .get().addOnSuccessListener {
+
               val data = it.toObjects(Todo::class.java).toMutableList()
                 Log.d(TAG , data.size.toString())
+
                 Log.d(TAG , data.joinToString { it.todo })
                 list = data
                 //Init Recycler View Adapter
@@ -101,8 +108,20 @@ class ViewTodosActivity : AppCompatActivity() {
                 Log.d(TAG , "FAILURE Getting Data")
 
             }
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.user_drawer,menu)
+        return super.onCreateOptionsMenu(menu)
 
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+           R.id.action_settings -> Toast.makeText(this,"Settings Clicked",Toast.LENGTH_SHORT).show()
+           // R.id.by_name -> Toast.makeText(this,"By name Selected Sort",Toast.LENGTH_SHORT).show()
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
