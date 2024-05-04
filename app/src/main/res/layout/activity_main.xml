@@ -91,6 +91,23 @@
 
     </ProgressBar>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_img_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Image"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/get_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Get Image"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        />
 
 
 </LinearLayout>

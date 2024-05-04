@@ -1,5 +1,6 @@
 package com.example.prioritytodo3mvvm
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -82,6 +83,7 @@ class ViewTodosActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun getUserTodos() {
        // list = mutableListOf()
         firestoreDb.collection("Todos1")

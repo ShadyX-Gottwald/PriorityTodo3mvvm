@@ -14,7 +14,12 @@ class AddTodoActivity : AppCompatActivity() {
     private lateinit var bind: ActivityAddTodoBinding
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private val firestoreDb: FirebaseFirestore  = FirebaseFirestore.getInstance()
-    private val addTodoViewModel by lazy { AddTodoViewModel(auth,firestoreDb) }
+    private val addTodoViewModel by lazy {
+        com.example.prioritytodo3mvvm.AddTodoViewModel(
+            auth,
+            firestoreDb
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

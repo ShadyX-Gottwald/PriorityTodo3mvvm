@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth : FirebaseAuth
-    private val viewModel by lazy { RegisterViewModel(auth ) }
+    private val viewModel by lazy { com.example.prioritytodo3mvvm.RegisterViewModel(auth) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerEvents() {
+
+        binding.getImageBtn.setOnClickListener{
+            val getImageIntent = Intent(this,GetImageActivity::class.java)
+            startActivity(getImageIntent)
+
+        }
+
+        binding.addImgBtn.setOnClickListener{
+            val imageUploadIntent = Intent(this,ImageUploadActivity::class.java)
+            startActivity(imageUploadIntent)
+        }
 
         binding.login.setOnClickListener() {
             //navController.navigate(R.id.action_signUp_Fragment_to_loginFragment)
